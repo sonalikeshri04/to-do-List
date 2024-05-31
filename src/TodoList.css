@@ -1,0 +1,190 @@
+/* src/TodoList.css */
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-image: url('../public/images/back.jpg');
+    background-size: cover;  
+    background-position: center;  
+    background-repeat: no-repeat; 
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.todo-container {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 350px;
+}
+
+.todo-container h1 {
+    margin-top: 0;
+    font-size: 26px;
+    color: #00796b;
+    text-align: center;
+}
+
+.todo-input-container {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.todo-input-container input {
+    flex: 1;
+    padding: 10px;
+    border: 2px solid #00796b;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.todo-input-container button {
+    padding: 10px;
+    margin-left: 10px;
+    border: none;
+    background: #00796b;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.todo-input-container button:hover {
+    background: #004d40;
+}
+
+.filters {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.filters label {
+    margin-right: 10px;
+    font-size: 14px;
+    color: #00796b;
+}
+
+.filters select {
+    padding: 5px;
+    font-size: 14px;
+    border: 1px solid #00796b;
+    border-radius: 4px;
+    background-color: #e0f7fa;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    transition: background 0.3s;
+}
+
+li:hover {
+    background: #f1f1f1;
+}
+
+li.completed .task-text {
+    text-decoration: line-through;
+    color: #888;
+}
+
+.task-text {
+    cursor: pointer;
+    flex-grow: 1;
+    font-size: 16px;
+}
+
+.task-buttons {
+    display: flex;
+    align-items: center;
+}
+
+.task-buttons button {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background 0.3s;
+}
+
+.task-buttons .complete-btn {
+    background: #007bff;
+    color: white;
+    margin-right: 5px;
+}
+
+.task-buttons .complete-btn:hover {
+    background: #0056b3;
+}
+
+.task-buttons .remove-btn {
+    background: #dc3545;
+    color: white;
+}
+
+.task-buttons .remove-btn:hover {
+    background: #c82333;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .todo-container {
+        width: 100%;
+        max-width: 90%;
+    }
+
+    .filters {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .filters label,
+    .filters select {
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .todo-container {
+        padding: 15px;
+    }
+
+    .todo-input-container input {
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    .todo-input-container button {
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    .filters label,
+    .filters select {
+        font-size: 12px;
+    }
+
+    .task-text {
+        font-size: 14px;
+    }
+
+    .task-buttons button {
+        padding: 4px 8px;
+        font-size: 12px;
+    }
+}
